@@ -15,8 +15,8 @@ function App() {
       <NavBar/>
       <Switch>
       <Route exact path="/">
-            <Home />
-          </Route>
+        <Home />
+      </Route>
       </Switch>
     </Router>
   );

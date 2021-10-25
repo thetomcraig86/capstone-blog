@@ -1,0 +1,13 @@
+body, html {
+    height: 100%;
+}
+.container {
+    display:flex;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+}
+.hero {
+    max-width: 100%;
+    
+}
