@@ -1,0 +1,43 @@
+.singlePost {
+
+}
+
+.sPWrapper {
+    padding: 20px;
+    
+}
+
+.sPImg {
+    width: 100%;
+    border-radius: 10px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.sPTitle {
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+}
+
+.sPEdit {
+    float: right;
+    font-size: 15px;
+}
+
+.sPIcon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.sPInfo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.sPDesc {
+    font-size: 20px;
+    line-height: 25px;
+}
