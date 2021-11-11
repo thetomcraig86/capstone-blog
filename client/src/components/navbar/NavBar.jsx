@@ -10,10 +10,9 @@ export default function NavBar() {
             </div>
             <div className="topCenter">
                 <ul className="navList">
-                    <li className="navListItem">HOME</li>
-                    <li className="navListItem">WRITE</li>
+                    <li className="navListItem">HOME</li> 
                     <li className="navListItem">CONTACT</li>
-                    <li className="navListItem">LOGOUT</li>
+                    <li className="navListItem">ACCOUNT</li>
                 </ul>
             </div>
             <div className="topRight">

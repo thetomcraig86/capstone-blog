@@ -1,13 +1,8 @@
-body, html {
-    height: 100%;
-}
-.container {
-    display:flex;
-    height: 100%;
-    align-content: center;
-    justify-content: center;
+.h-container {
+    background-color: black;
 }
 .hero {
+    display: block;
     max-width: 100%;
-    
+    margin: 0; 
 }
