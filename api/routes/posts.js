@@ -9,6 +9,7 @@ router.post("/", async (req, res) => {
     res.status(200).json(savedPost);
   } catch (err) {
     res.status(500).json(err);
+    
   }
 }); 
 
@@ -53,8 +54,7 @@ router.get("/:id", async (req, res) => {
 //GET ALL POSTS
 router.get("/", async (req, res) => {
   try {
-    let posts;
-    posts = await Post.find();
+    const posts = await Post.find();
     res.status(200).json(posts);
   } catch (err) {
     res.status(500).json(err);
