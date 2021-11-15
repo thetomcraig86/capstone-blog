@@ -7,13 +7,17 @@ const PostSchema = new mongoose.Schema(
          required:true,
          unique:true
      },
-     author:{
+     username:{
         type:String,
         required:true
      },
      content: {
         type:String,
         required:true 
+     },
+     photo: {
+         type:String,
+         required:false
      } 
     },
     {timestamps: true},

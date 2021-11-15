@@ -1,44 +1,41 @@
-import NavBar from "./components/navbar/NavBar";
-import Home from "./pages/home/Home";
-import Single from "./pages/single/Single";
-import Write from "./pages/write/Write"
-import Login from "./pages/login/Login"
-import Register from "./pages/register/Register"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import { useContext } from "react";
-import { Context } from "./context/Context";
-
-
+import NavBar from './components/navbar/NavBar';
+import Home from './pages/home/Home';
+import Single from './pages/single/Single';
+import Write from './pages/write/Write';
+import Update from './pages/update/Update';
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useContext } from 'react';
+import { Context } from './context/Context';
 
 function App() {
-  const {user} = useContext(Context)
+  const { user } = useContext(Context);
   return (
     <Router>
-      <NavBar/>
+      <NavBar />
       <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/post/:postId">
-        <Single/>
-      </Route>
-      <Route path="/write">
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route path='/post/:postId'>
+          <Single />
+        </Route>
+        <Route path='/write'>
           {user ? <Write /> : <Login />}
-        <Write/>
-      </Route>
-      <Route path="/login">
-        {user ? <Home /> : <Login />}
-        <Login/>
-      </Route>
-      <Route path="/register">
-        {user ? <Home /> : <Register />}
-        <Register/>
-      </Route>
+          
+        </Route>
+        <Route path='/login'>
+          {user ? <Home /> : <Login />}
+          
+        </Route>
+        <Route path='/register'>
+          {user ? <Home /> : <Register />}
+          
+        </Route>
+        <Route path='/update/:postId'>
+          <Update />
+        </Route>
       </Switch>
     </Router>
   );
