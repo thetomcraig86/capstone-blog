@@ -10,11 +10,13 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 
 
 function App() {
-  const currentUser = true;
+  const {user} = useContext(Context)
   return (
     <Router>
       <NavBar/>
@@ -26,15 +28,15 @@ function App() {
         <Single/>
       </Route>
       <Route path="/write">
-          {currentUser ? <Write /> : <Login />}
+          {user ? <Write /> : <Login />}
         <Write/>
       </Route>
       <Route path="/login">
-        {currentUser ? <Home /> : <Login />}
+        {user ? <Home /> : <Login />}
         <Login/>
       </Route>
       <Route path="/register">
-        {currentUser ? <Home /> : <Register />}
+        {user ? <Home /> : <Register />}
         <Register/>
       </Route>
       </Switch>

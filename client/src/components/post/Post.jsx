@@ -1,19 +1,20 @@
-import './post.css'
-import postimg  from "../../media/bwcomputerdesk.jpg"
+import './post.css';
+import postimg  from "../../media/bwcomputerdesk.jpg";
+import { Link } from "react-router-dom";
 
-export default function Post() {
+export default function Post({post}) {
     return (
         <div className="post">
             <img className="postImg"
             src={postimg}
             alt="black and white computer" />
             <div className="postInfo">
-            <span className="postTitle"> Insert Title</span>
-            <span className="postDate">Insert Date/Time</span>
+            <Link to={`/post/${post._id}`} className="link">
+                <span className="postTitle">{post.title}</span>
+            </Link>
+            <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
             </div>
-            <p className="postDesc">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore fuga, a natus eos nisi facilis autem molestias amet optio aliquid mollitia consequuntur culpa maxime quo repudiandae delectus quaerat consequatur tenetur.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore fuga, a natus eos nisi facilis autem molestias amet optio aliquid mollitia consequuntur culpa maxime quo repudiandae delectus quaerat consequatur tenetur.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore fuga, a natus eos nisi facilis autem molestias amet optio aliquid mollitia consequuntur culpa maxime quo repudiandae delectus quaerat consequatur tenetur.
-            </p>
+            <p className="postDesc">{post.content}</p>
         </div>
     )
 }

@@ -40,6 +40,10 @@
     border-radius: 10px;
     text-align: center;
   }
+
+  .loginButton:disabled {
+    cursor: not-allowed;
+  }
   
   .loginRegisterButton {
     position: absolute;

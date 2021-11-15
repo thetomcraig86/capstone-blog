@@ -23,9 +23,10 @@ router.post("/login", async (req, res) => {
     !password && res.status(400).json("Incorrect Login Information");
 
     
-    res.status(200).json(others);
+    res.status(200).json(user);
   } catch (err) {
     res.status(500).json(err);
+   
   }
 });
 
