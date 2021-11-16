@@ -53,7 +53,7 @@ export default function SinglePost() {
             {new Date(post.createdAt).toDateString()}
           </span>
         </div>
-        <p className='sPDesc'>{post.content}</p>
+        <p className='sPContent'>{post.content}</p>
       </div>
     </div>
   );

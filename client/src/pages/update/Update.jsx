@@ -4,6 +4,7 @@ import axios from "axios";
 import { Context } from "../../context/Context";
 import { useLocation } from 'react-router';
 
+
 export default function Update() {
   const location = useLocation();
   const path = location.pathname.split('/')[2];
@@ -31,7 +32,7 @@ export default function Update() {
         title,
         content,
       });
-      await window.location.href('/post/' + path);
+      window.location.assign('/post/' + path);
     } catch (err) {
       console.log(err);
     }

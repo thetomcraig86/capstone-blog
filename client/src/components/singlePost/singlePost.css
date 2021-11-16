@@ -3,7 +3,7 @@
 }
 
 .sPWrapper {
-    padding: 20px;
+
     
 }
 
@@ -15,14 +15,15 @@
 }
 
 .sPTitle {
+    color: white;
     text-align: center;
     margin: 10px;
-    font-size: 30px;
+    font-size: 2.5em;
 }
 
 .sPEdit {
     float: right;
-    font-size: 15px;
+    font-size: .5em;
 }
 
 .sPIcon {
@@ -31,13 +32,17 @@
 }
 
 .sPInfo {
+    color: white;
     margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
-    font-size: 15px;
+    justify-content: space-evenly;
+    font-size: 1em;
+
+    
 }
 
-.sPDesc {
-    font-size: 20px;
-    line-height: 25px;
+.sPContent {
+    color: white;
+    font-size:2em;
+    padding: 1em;
 }
