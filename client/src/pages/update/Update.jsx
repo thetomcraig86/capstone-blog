@@ -31,7 +31,7 @@ export default function Update() {
         title,
         content,
       });
-      await window.location.replace('/post/' + path);
+      await window.location.href('/post/' + path);
     } catch (err) {
       console.log(err);
     }
