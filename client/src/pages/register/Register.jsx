@@ -55,6 +55,7 @@ export default function Register() {
         Register
         </button>
       </form>
+      <div className="msg">Already Registered? Click Below to Login</div>
         <button className="registerLoginButton">
         <Link className="link" to="/login">Login</Link>
         </button>

@@ -1,9 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
 import './update.css';
-import axios from "axios";
-import { Context } from "../../context/Context";
+import axios from 'axios';
+import { Context } from '../../context/Context';
 import { useLocation } from 'react-router';
-
 
 export default function Update() {
   const location = useLocation();
@@ -13,7 +12,15 @@ export default function Update() {
   const { user } = useContext(Context);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const [photo, setPhoto] = useState('');
   const PF = 'http://localhost:5000/images/';
+
+  /*function setImage(e) {
+    var name = e.name;
+    setFile(name);
+    setPhoto(name);
+    console.log(name);
+  }*/
 
   useEffect(() => {
     const getPost = async () => {
@@ -21,28 +28,41 @@ export default function Update() {
       setPost(res.data);
       setTitle(res.data.title);
       setContent(res.data.content);
+      setPhoto(res.data.photo);
     };
     getPost();
   }, [path]);
 
-  const handleUpdate = async () => {
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+    const updatedPost = {
+      username: user.username,
+      title,
+      content,
+    };
+    if (file) {
+      const data = new FormData();
+      const filename = Date.now() + file.name;
+      data.append('name', filename);
+      data.append('file', file);
+      updatedPost.photo = filename;
+      try {
+        await axios.post('/upload', data);
+      } catch (err) {
+        console.log(err);
+      }
+    }
     try {
-      await axios.put(`/posts/${post._id}`, {
-        username: user.username,
-        title,
-        content,
-      });
-      window.location.assign('/post/' + path);
+      await axios.put("/posts/" + post._id, updatedPost);
     } catch (err) {
       console.log(err);
     }
+     window.location.assign('/post/' + path);
   };
 
   return (
     <div className='update'>
-      {post.photo && (
-          <img src={PF + post.photo} alt='' className='updateImg' />
-        )}
+      {photo && <img src={PF + photo} alt='' className='updateImg' />}
       <form className='updateForm' onSubmit={handleUpdate}>
         <div className='updateFormGroup'>
           <label htmlFor='fileInput'>
@@ -56,10 +76,10 @@ export default function Update() {
           />
           <input
             type='text'
-            value = {title}
+            value={title}
             className='updateInput'
             autoFocus={true}
-            onChange={e=>setTitle(e.target.value)}
+            onChange={(e) => setTitle(e.target.value)}
           />
         </div>
         <div className='updateFormGroup'>
@@ -67,7 +87,7 @@ export default function Update() {
             value={content}
             type='text'
             className='updateInput updateText'
-            onChange={e=>setContent(e.target.value)}
+            onChange={(e) => setContent(e.target.value)}
           ></textarea>
         </div>
         <button className='updateSubmit' type='submit'>

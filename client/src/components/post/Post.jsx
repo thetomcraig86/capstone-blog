@@ -9,12 +9,12 @@ export default function Post({ post }) {
       {post.photo && <img className='card-img-top postImg' src={PF + post.photo} alt='' />}
       <div className='postInfo'>
         <Link to={`/post/${post._id}`} className='link'>
-          <span className='card-title postTitle'>{post.title}</span>
+          <div className='card-title postTitle'>{post.title}</div>
         </Link>
-        <span className="card-subtitle">Author: {post.username}</span>
-        <span className='card-subtitle postDate'>
+        <div className="card-subtitle postUsername">Author: {post.username}</div>
+        <div className='card-subtitle postDate'>
           {new Date(post.createdAt).toDateString()}
-        </span>
+        </div>
       </div>
       <p className='card-text postContent'>{post.content}</p>
     </div>

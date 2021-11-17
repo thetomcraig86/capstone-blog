@@ -7,7 +7,7 @@ a:hover {
   color: inherit;
 }
 .card {
-  height: 50vh;
+  height: 80vh;
   background-color: #111014;
   color:white;
   border: none;
@@ -25,7 +25,7 @@ a:hover {
 }
 
 .card-img-top {
-  height: 50%;
+  height: 40%;
 }
 
 .postImg {
@@ -37,8 +37,8 @@ a:hover {
 .postInfo {
   display: flex;
   flex-direction: column;
+  padding: 15px 15px;
   align-items: center;
-  font-size: 1em;
 }
 
 .postTitle {
@@ -46,14 +46,17 @@ a:hover {
   font-weight: 700;
   margin-top: 15px;
   cursor: pointer;
+  
+  
 }
 
 .postDate {
   font-style: italic;
+  
 }
 
 .postContent {
-  font-size: 20px;
+  font-size: 1.2em;
   padding: 0px 10px;
   margin-top: 15px;
   overflow: hidden;
@@ -65,7 +68,30 @@ a:hover {
 }
 
 @media only screen and (max-width:900px) {
-    .card-title{
-        font-size: 75%;
+    .postTitle{
+        font-size: 1.3em;
     }
-}
+    .postUsername{
+      font-size: 0.8em;
+    }
+    .postDate{
+      font-size: 0.8em;
+    }
+    .postContent{
+      font-size: 1em;
+    }
+  }
+  @media only screen and (max-width:767px) {
+    .postTitle{
+        font-size: 1.75em;
+    }
+    .postUsername{
+      font-size: 1em;
+    }
+    .postDate{
+      font-size: 1em;
+    }
+    .postContent{
+      font-size: 1.2em;
+    }
+  }

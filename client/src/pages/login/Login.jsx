@@ -46,6 +46,7 @@ export default function Login() {
           Login
         </button>
       </form>
+      <div className="msg">Not Registered? Click below to get started!</div>
       <button className='loginRegisterButton'>
         <Link className='link' to='/register'>
           Register
