@@ -48,7 +48,7 @@ export default function SinglePost() {
           )}
         </h1>
         <div className='sPInfo'>
-          <span className='sPAuthor'>{post.username}</span>
+          <span className='sPUsername'>{post.username}</span>
           <span className='sPDate'>
             {new Date(post.createdAt).toDateString()}
           </span>

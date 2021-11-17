@@ -39,14 +39,14 @@ export default function Update() {
   };
 
   return (
-    <div className='write'>
+    <div className='update'>
       {post.photo && (
-          <img src={PF + post.photo} alt='' className='singlePostImg' />
+          <img src={PF + post.photo} alt='' className='updateImg' />
         )}
-      <form className='writeForm' onSubmit={handleUpdate}>
-        <div className='writeFormGroup'>
+      <form className='updateForm' onSubmit={handleUpdate}>
+        <div className='updateFormGroup'>
           <label htmlFor='fileInput'>
-            <i className='writeIcon fas fa-plus'></i>
+            <i className='updateIcon fas fa-plus'></i>
           </label>
           <input
             type='file'
@@ -57,20 +57,20 @@ export default function Update() {
           <input
             type='text'
             value = {title}
-            className='writeInput'
+            className='updateInput'
             autoFocus={true}
             onChange={e=>setTitle(e.target.value)}
           />
         </div>
-        <div className='writeFormGroup'>
+        <div className='updateFormGroup'>
           <textarea
             value={content}
             type='text'
-            className='writeInput writeText'
+            className='updateInput updateText'
             onChange={e=>setContent(e.target.value)}
           ></textarea>
         </div>
-        <button className='writeSubmit' type='submit'>
+        <button className='updateSubmit' type='submit'>
           Update
         </button>
       </form>

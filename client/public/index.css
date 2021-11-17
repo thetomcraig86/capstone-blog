@@ -3,6 +3,10 @@
     font-size: 100%;
 }
 
+.html {
+    background-color: #19181F;
+    height: 100vh;
+}
 .link {
     text-decoration: none;
     color:inherit;

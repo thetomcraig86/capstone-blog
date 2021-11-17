@@ -1,9 +1,12 @@
 .write {
     padding-top: 50px;
+    background-color:#19181F;
+    color: white;
 }
 
 .writeImg {
-    margin-left: 150px;
+    margin-left: 20%;
+    margin-right: 20%;
     width: 70vw;
     height: 250px;
     border-radius: 10px;
@@ -12,12 +15,20 @@
 
 .writeForm {
     position: relative;
+    background-color: #19181F;
+    min-height:86vh;
 }
 
 .writeFormGroup {
-    margin-left: 150px;
+    margin-left: 20%;
+    margin-right: 20%;
     display: flex;
     align-items: center;
+    background-color: #19181F;  
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
 }
 
 .writeIcon {
@@ -35,7 +46,8 @@
     border: none;
     padding: 20px;
     width: 70vw;
-    
+    background-color: #19181F;
+    color: white;   
 }
 .writeInput:focus {
     outline: none;
@@ -43,7 +55,7 @@
 
 .writeText {
     font-size: 20px;
-    height: 100vh;
+    
 }
 
 .writeSubmit {
@@ -58,3 +70,9 @@
     border: none;
     cursor: pointer;
 }
+
+textarea {
+    resize: none; 
+    height: 500px;
+    white-space: pre-wrap;
+ }

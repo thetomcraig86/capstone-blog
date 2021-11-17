@@ -1,26 +1,39 @@
-.write {
+
+
+.update {
     padding-top: 50px;
+    background-color:#19181F;
+    color: white;
 }
 
-.writeImg {
-    margin-left: 150px;
+.updateImg {
+    margin-left: 20%;
+    margin-right: 20%;
     width: 70vw;
     height: 250px;
     border-radius: 10px;
     object-fit: cover;
 }
 
-.writeForm {
+.updateForm {
     position: relative;
+    background-color: #19181F;
+    min-height:86vh;
 }
 
-.writeFormGroup {
-    margin-left: 150px;
+.updateFormGroup {
+    margin-left: 20%;
+    margin-right: 20%;
     display: flex;
     align-items: center;
+    background-color: #19181F;  
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
 }
 
-.writeIcon {
+.updateIcon {
     width: 25px;
     height: 25px;
     display: flex;
@@ -30,23 +43,24 @@
     font-size: 25px;
 }
 
-.writeInput {
+.updateInput {
     font-size: 30px;
     border: none;
     padding: 20px;
     width: 70vw;
-    
+    background-color: #19181F;
+    color: white;   
 }
-.writeInput:focus {
+.updateInput:focus {
     outline: none;
 }
 
-.writeText {
+.updateText {
     font-size: 20px;
-    height: 100vh;
+   
 }
 
-.writeSubmit {
+.updateSubmit {
     position: absolute;
     top: 20px;
     right: 75px;
@@ -57,4 +71,11 @@
     padding: 10px;
     border: none;
     cursor: pointer;
+}
+
+textarea {
+   resize: none; 
+   height: 500px;
+   white-space: pre-wrap;
+
 }
