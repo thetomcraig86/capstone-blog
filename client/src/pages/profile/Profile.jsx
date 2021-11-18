@@ -56,7 +56,7 @@ export default function Profile() {
           </button>
         </form>
         
-          {error && <span>Didn't Work...</span>}
+          {error && <span>Didn't Work... Try again</span>}
       </div>
     )
 }
