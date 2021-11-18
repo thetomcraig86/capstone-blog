@@ -47,12 +47,15 @@ export default function SinglePost() {
             </div>
           )}
         </h1>
-        <div className='sPInfo'>
-          <span className='sPUsername'>{post.username}</span>
-          <span className='sPDate'>
-            {new Date(post.createdAt).toDateString()}
-          </span>
+        <div className='infoWrapper'>
+          <div className='sPInfo'>
+            <span className='sPUsername'>Author: {post.username}</span>
+            <span className='sPDate'>
+              Posted on: {new Date(post.createdAt).toDateString()}
+            </span>
+          </div>
         </div>
+
         <p className='sPContent'>{post.content}</p>
       </div>
     </div>

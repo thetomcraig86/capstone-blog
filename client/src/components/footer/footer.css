@@ -1,0 +1,27 @@
+.myFooter {
+  color: ghostwhite;
+  display: flex;
+  height: 10vh;
+  background: rgb(13, 16, 17);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(13, 16, 17, 1) 0%,
+    rgba(37, 53, 56, 1) 53%,
+    rgba(4, 157, 217, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(13, 16, 17, 1) 0%,
+    rgba(37, 53, 56, 1) 53%,
+    rgba(4, 157, 217, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(13, 16, 17, 1) 0%,
+    rgba(37, 53, 56, 1) 53%,
+    rgba(4, 157, 217, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d1011",endColorstr="#049dd9",GradientType=1);
+  align-items: center;
+  justify-content: center;
+}

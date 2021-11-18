@@ -35,12 +35,21 @@
   cursor: pointer;
 }
 
-.sPInfo {
-  color: white;
-  margin-bottom: 20px;
+.infoWrapper {
   display: flex;
   justify-content: center;
+
+}
+.sPInfo {
+  color: rgb(192, 192, 192);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
   font-size: 1em;
+  font-style: italic;
+  width: 50%;
+  
+
 }
 
 .sPContent {
@@ -56,4 +65,12 @@
 
 .sPDate {
   margin-left: 50px;
+}
+
+.fa-edit {
+  color: #049dd9;
+}
+
+.fa-trash-alt {
+  color: #c91089;
 }

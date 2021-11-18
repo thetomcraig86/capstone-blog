@@ -1,0 +1,45 @@
+.updateP {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #19181f;
+  color: white;
+}
+
+.updatePTitle {
+  font-size: 50px;
+}
+
+.updatePForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.updatePForm > label {
+  margin: 10px 0;
+}
+
+.updatePInput {
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.updatePInput:focus {
+  outline: none;
+}
+
+.updatePButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #049dd9;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}

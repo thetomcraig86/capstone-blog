@@ -49,7 +49,7 @@ export default function NavBar() {
         </ul>
 
         {user ? (
-          <Link className='nav-link' to='/write'>
+          <Link className='nav-link' to='/profile'>
             <img
               className='profilePic nav-item'
               src='https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=47&w=79'
@@ -70,7 +70,7 @@ export default function NavBar() {
             </li>
           </ul>
         )}
-        <i className='topIconSearch fas fa-search nav-link'></i>
+        
       </div>
     </nav>
   );

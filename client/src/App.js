@@ -5,6 +5,8 @@ import Write from './pages/write/Write';
 import Update from './pages/update/Update';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
+import Profile from './pages/profile/Profile';
+import Footer from './components/footer/Footer'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useContext } from 'react';
 import { Context } from './context/Context';
@@ -36,7 +38,11 @@ function App() {
         <Route path='/update/:postId'>
           <Update />
         </Route>
+        <Route path='/profile'>
+          <Profile />
+        </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }
