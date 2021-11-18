@@ -3,9 +3,13 @@
     font-size: 100%;
 }
 
-.html {
-    background-color: #19181F;
+html {
     height: 100vh;
+}
+
+body {
+    background: #19181F;
+    padding-top: 50px;
 }
 .link {
     text-decoration: none;
