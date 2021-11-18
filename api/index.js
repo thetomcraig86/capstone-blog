@@ -6,6 +6,9 @@ const postsRoute = require('./routes/posts');
 const authRoute = require('./routes/auth');
 const multer = require('multer');
 const path = require('path');
+const PORT = process.env.PORT || 5000;
+
+
 
 dotenv.config();
 app.use(express.json());
@@ -35,3 +38,9 @@ app.use('/api/auth', authRoute);
 app.listen('5000', () => {
   console.log('Backend is running.');
 });
+
+if (process.env.NODE_ENV === 'production'){
+  app.use(express.static('../client/build'))
+}
+
+app.listen(PORT, console.log(`Server is starting at ${PORT}`));
