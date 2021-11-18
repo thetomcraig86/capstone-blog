@@ -1,7 +1,7 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
+  "description": "React Blog with MERN stack",
   "main": "index.js",
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -13,8 +13,12 @@
     "path": "^0.12.7"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "server":  "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "homepage": "https://hccwebdev.net/capstone1/"
   },
-  "author": "",
+  "author": "Tom C",
   "license": "ISC"
 }
