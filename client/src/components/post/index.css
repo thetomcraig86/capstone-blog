@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    font-size: 100%;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    background: #19181F;
+    padding-top: 10vh;
+}
+.link {
+    text-decoration: none;
+    color:inherit;
+}
