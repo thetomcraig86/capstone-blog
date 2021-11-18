@@ -1,29 +1,32 @@
+
 .bg-dark {
-  background: rgb(13, 16, 17);
+  background: rgb(13, 16, 17) !important; 
   background: -moz-linear-gradient(
     180deg,
     rgba(13, 16, 17, 1) 0%,
     rgba(37, 53, 56, 1) 53%,
     rgba(4, 157, 217, 1) 100%
-  );
+  )!important;
   background: -webkit-linear-gradient(
     180deg,
     rgba(13, 16, 17, 1) 0%,
     rgba(37, 53, 56, 1) 53%,
     rgba(4, 157, 217, 1) 100%
-  );
+  )!important;
   background: linear-gradient(
     180deg,
     rgba(13, 16, 17, 1) 0%,
     rgba(37, 53, 56, 1) 53%,
     rgba(4, 157, 217, 1) 100%
-  );
+  )!important;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d1011",endColorstr="#049dd9",GradientType=1);
 }
 
+
 .navbar {
-  height: 10vh;
+  min-height: 10vh!important;
 }
+
 .navbar-dark,
 .navbar-nav,
 .nav-link {
@@ -31,15 +34,15 @@
 }
 
 .nav-link {
-  font-size: 1.3em;
-  cursor: pointer;
+  font-size: 1.3em!important;
+  cursor: pointer!important;
 }
 
 .nav-link:hover {
   color: rgb(168, 168, 168) !important;
 }
 .topIcon {
-  cursor: pointer;
+  cursor: pointer!important;
   
 }
 
