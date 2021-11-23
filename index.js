@@ -25,8 +25,6 @@ mongoose
 app.use('/api/posts', postsRoute);
 app.use('/api/auth', authRoute);
 
-app.listen('5000', () => {
-  console.log('Backend is running.');
-});
+
 
 app.listen(PORT, () => console.log(`Server is listening on port ${PORT}...`));
