@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const postsRoute = require('./routes/posts');
 const authRoute = require('./routes/auth');
 const path = require('path');
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 80;
 
 
 
