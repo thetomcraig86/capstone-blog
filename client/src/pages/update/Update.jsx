@@ -13,7 +13,7 @@ export default function Update() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [photo, setPhoto] = useState('');
-  const PF = 'http://localhost:5000/images/';
+  
 
   /*function setImage(e) {
     var name = e.name;
@@ -40,18 +40,6 @@ export default function Update() {
       title,
       content,
     };
-    if (file) {
-      const data = new FormData();
-      const filename = Date.now() + file.name;
-      data.append('name', filename);
-      data.append('file', file);
-      updatedPost.photo = filename;
-      try {
-        await axios.post('/upload', data);
-      } catch (err) {
-        console.log(err);
-      }
-    }
     try {
       await axios.put("/posts/" + post._id, updatedPost);
     } catch (err) {
@@ -62,7 +50,7 @@ export default function Update() {
 
   return (
     <div className='update'>
-      {photo && <img src={PF + photo} alt='' className='updateImg' />}
+      <img src={process.env.PUBLIC_URL + 'blogimg.png'} alt='' className='updateImg' />
       <form className='updateForm' onSubmit={handleUpdate}>
         <div className='updateFormGroup'>
           <label htmlFor='fileInput'>

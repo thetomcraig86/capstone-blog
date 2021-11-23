@@ -17,18 +17,7 @@ export default function Write() {
       title,
       content,
     };
-    if (file) {
-      const data = new FormData();
-      const filename = Date.now() + file.name;
-      data.append('name', filename);
-      data.append('file', file);
-      newPost.photo = filename;
-      try {
-        await axios.post('/upload', data);
-      } catch (err) {
-          console.log(err);
-      }
-    }
+
     try {
       const res = await axios.post('/posts', newPost);
       
@@ -40,9 +29,9 @@ export default function Write() {
 
   return (
     <div className='write'>
-      {file && (
-        <img className='writeImg' src={URL.createObjectURL(file)} alt='' />
-      )}
+      
+        <img className='writeImg' src={process.env.PUBLIC_URL + 'blogimg.png'} alt='blog' />
+      
       <form className='writeForm' onSubmit={handleSubmit}>
         <div className='writeFormGroup'>
           <label htmlFor='fileInput'>
